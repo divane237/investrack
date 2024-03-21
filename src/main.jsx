@@ -20,23 +20,23 @@ const router = createBrowserRouter([
         path: "test",
         element: <Stocks />,
       },
+      {
+        path: "home",
+        element: <Homepage />, //This serves as the root layout
+      },
+      {
+        path: "cryptocurrencies",
+        element: <Cryptocurrencies />,
+      },
+      {
+        path: "portfolio",
+        element: <Portfolio />,
+      },
+      {
+        path: "Stocks",
+        element: <Stocks />,
+      },
     ],
-  },
-  {
-    path: "home",
-    element: <Homepage />, //This serves as the root layout
-  },
-  {
-    path: "cryptocurrencies",
-    element: <Cryptocurrencies />,
-  },
-  {
-    path: "portfolio",
-    element: <Portfolio />,
-  },
-  {
-    path: "Stocks",
-    element: <Stocks />,
   },
 ]);
 
