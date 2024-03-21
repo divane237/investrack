@@ -5,11 +5,11 @@ import Footer from "./Footer";
 function AppLayout() {
   return (
     <div>
-      <NavBar></NavBar>
+      <NavBar />
       <main>
         <Outlet />
       </main>
-      <Footer></Footer>
+      <Footer>Divane Footer</Footer>
     </div>
   );
 }
