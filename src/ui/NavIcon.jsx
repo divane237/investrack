@@ -1,24 +1,45 @@
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from 'react-router-dom';
 
 const NAVLINK_STYLE =
-  "md:text-2xl font-bold text-md max-sm:hidden md:font-bold hover:bg-blue-900 px-8 py-9 active:bg-blue-900";
+  'max-sm:hidden text-xl font-normal hover:bg-blue-900 text-center px-2 py-[1rem]';
+// const NAVLINK_STYLE = 'max-sm:bg-red-700 bg-green-700';
 
 function NavIcon() {
   return (
-    <div className="flex sm:items-center min-h-full px-1">
-      <Link className="sm:hidden hover:bg-blue-900">
-        <img src="../public/images/menuIcon.png" />
-      </Link>
-      <NavLink to="cryptocurrencies" className={NAVLINK_STYLE}>
-        Cryptocurrencies
-      </NavLink>
-      <NavLink to="stocks" className={NAVLINK_STYLE}>
-        Stocks
-      </NavLink>
-      <NavLink to="portfolio" className={NAVLINK_STYLE}>
-        Portfolio
-      </NavLink>
-    </div>
+    <ul className="mr-2 flex-row  sm:flex sm:items-center">
+      {/* Mobile icons nav bar */}
+      <li className="flex items-center">
+        <NavLink className="hover:bg-green-900 sm:hidden">
+          <img src="../public/images/menuIcon.png" className="w-14" />
+        </NavLink>
+        <NavLink to="login" className="sm:hidden">
+          {' '}
+          <img src="../public/images/loginIcon.png" className="w-8" />
+        </NavLink>
+      </li>
+
+      <li>
+        <NavLink to="cryptocurrencies" className={NAVLINK_STYLE}>
+          Cryptocurrencies
+        </NavLink>
+      </li>
+      <li>
+        <NavLink to="stocks" className={NAVLINK_STYLE}>
+          Stocks
+        </NavLink>
+      </li>
+      <li>
+        <NavLink to="portfolio" className={NAVLINK_STYLE}>
+          Portfolio
+        </NavLink>
+      </li>
+
+      <li className={`${NAVLINK_STYLE} bg-blue-900`}>
+        <NavLink to="login" className="max-sm:hidden">
+          Login
+        </NavLink>
+      </li>
+    </ul>
   );
 }
 

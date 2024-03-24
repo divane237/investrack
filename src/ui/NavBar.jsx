@@ -1,10 +1,9 @@
-import { Link } from "react-router-dom";
-import Logo from "./Logo";
-import NavIcon from "./NavIcon";
+import Logo from './Logo';
+import NavIcon from './NavIcon';
 
 function NavBar() {
   return (
-    <div className="flex items-center text-slate-100 bg-blue-600">
+    <div className="h-15 flex items-center justify-between bg-blue-600 text-slate-100">
       <Logo />
       <NavIcon />
       {/* <Link className="h-full block bg-red-500">Hello</Link> */}

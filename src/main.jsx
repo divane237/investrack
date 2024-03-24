@@ -9,6 +9,8 @@ import Cryptocurrencies from "./pages/Cryptocurrencies";
 import Portfolio from "./pages/Portfolio";
 import Stocks from "./pages/Stocks";
 import App from "./App";
+import Test from "./pages/Test";
+import LoginPage from "./pages/LoginPage";
 
 const router = createBrowserRouter([
   {
@@ -16,10 +18,6 @@ const router = createBrowserRouter([
     element: <App />,
     errorElement: <ErrorPage />,
     children: [
-      {
-        path: "test",
-        element: <Stocks />,
-      },
       {
         path: "home",
         element: <Homepage />, //This serves as the root layout
@@ -33,10 +31,18 @@ const router = createBrowserRouter([
         element: <Portfolio />,
       },
       {
-        path: "Stocks",
+        path: "stocks",
         element: <Stocks />,
       },
     ],
+  },
+  {
+    path: "test",
+    element: <Test />,
+  },
+  {
+    path: "login",
+    element: <LoginPage />,
   },
 ]);
 
