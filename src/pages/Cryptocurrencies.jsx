@@ -1,5 +1,12 @@
+import ListOfCrypto from '../ui/CryptoItemList';
+
 function Cryptocurrencies() {
-  return <div>Cryptocurrency</div>;
+  return (
+    <div>
+      Cryptocurrency
+      <ListOfCrypto />
+    </div>
+  );
 }
 
 export default Cryptocurrencies;
