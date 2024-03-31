@@ -1,8 +1,9 @@
 function CryptoItem({ crypto }) {
   return (
     <li>
-      <h1>{crypto.name}</h1>
-      <p>{crypto.symbol}</p>
+      <span>{crypto.name}</span>
+      <span>{crypto.symbol}</span>
+      <span>{crypto.quote.USD.price}</span>
     </li>
   );
 }

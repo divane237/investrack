@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import './index.css';
 
 import ErrorPage from './pages/ErrorPage';
 import Homepage from './pages/Homepage';
@@ -12,6 +12,7 @@ import App from './App';
 import Test from './pages/Test';
 import LoginPage from './pages/LoginPage';
 
+import { loader as cryptoLoader } from './pages/Cryptocurrencies';
 const router = createBrowserRouter([
   {
     path: '/',
@@ -25,6 +26,7 @@ const router = createBrowserRouter([
       {
         path: 'cryptocurrencies',
         element: <Cryptocurrencies />,
+        loader: cryptoLoader,
       },
       {
         path: 'portfolio',

@@ -8,13 +8,13 @@ function NavIcon() {
   return (
     <ul className="mr-2 flex-row  sm:flex sm:items-center">
       {/* Mobile icons nav bar */}
-      <li className="flex items-center gap-x-4">
+      <li className="flex items-center gap-x-1">
         <NavLink className="hover:bg-green-900 sm:hidden">
           <img src="../public/images/menuIcon.png" className="w-16" />
         </NavLink>
         <NavLink to="login" className="sm:hidden">
           {' '}
-          <img src="../public/images/loginIcon.png" className="w-6" />
+          <img src="../public/images/loginIcon.png" className="mx-4 w-6" />
         </NavLink>
       </li>
 
