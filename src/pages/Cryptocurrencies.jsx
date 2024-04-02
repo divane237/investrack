@@ -4,7 +4,7 @@ import ListOfCrypto from '../ui/CryptoItemList';
 
 function Cryptocurrencies() {
   return (
-    <div>
+    <div className="flex flex-col items-start">
       <CryptoBanner />
       <ListOfCrypto />
     </div>
