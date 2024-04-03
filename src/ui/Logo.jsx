@@ -2,11 +2,11 @@ import { NavLink } from 'react-router-dom';
 
 function Logo() {
   return (
-    <NavLink
-      to="/"
-      className="items-centerS flex flex-col px-1 text-xl font-extrabold tracking-wider md:text-2xl"
-    >
-      <img src="../public/images/investracker.svg" />
+    <NavLink to="/" className={'mr-auto block'}>
+      <img
+        src="../public/images/investracker.svg"
+        className={'ml-2 mt-3 w-36'}
+      />
     </NavLink>
   );
 }

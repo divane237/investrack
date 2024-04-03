@@ -1,45 +1,53 @@
 import { NavLink } from 'react-router-dom';
 
 const NAVLINK_STYLE =
-  'max-sm:hidden text-xl font-semibold hover:bg-blue-900 text-center px-2 py-[1.2rem]';
+  'max-sm:hidden hover:bg-stone-300 hover:py-4 text-xl font-semibold hover:bg-blue-900 px-2 ';
 // const NAVLINK_STYLE = 'max-sm:bg-red-700 bg-green-700';
 
 function NavIcon() {
   return (
-    <ul className="mr-2 flex-row  sm:flex sm:items-center">
-      {/* Mobile icons nav bar */}
-      <li className="flex items-center gap-x-1">
-        <NavLink className="hover:bg-green-900 sm:hidden">
-          <img src="../public/images/menuIcon.png" className="w-16" />
-        </NavLink>
-        <NavLink to="login" className="sm:hidden">
-          {' '}
-          <img src="../public/images/loginIcon.png" className="mx-4 w-6" />
-        </NavLink>
-      </li>
+    <div className={''}>
+      <ul className={'flex w-full items-center sm:hidden'}>
+        {/* Mobile icons nav bar */}
+        <li className={'block px-2 hover:bg-stone-300 hover:py-2.5'}>
+          <NavLink className={''}>
+            <img src="../public/images/MenuIcon.svg" className={'h-8 w-10'} />
+          </NavLink>
+        </li>
+        {/*  */}
+        <li className={'px-2 hover:bg-stone-300 hover:py-2.5'}>
+          <NavLink to="login" className={''}>
+            {' '}
+            <img src="../public/images/loginIcon.svg" className={'w-10'} />
+          </NavLink>
+        </li>
+      </ul>
 
-      <li>
-        <NavLink to="cryptocurrencies" className={NAVLINK_STYLE}>
-          Cryptocurrencies
-        </NavLink>
-      </li>
-      <li>
-        <NavLink to="stocks" className={NAVLINK_STYLE}>
-          Stocks
-        </NavLink>
-      </li>
-      <li>
-        <NavLink to="portfolio" className={NAVLINK_STYLE}>
-          Portfolio
-        </NavLink>
-      </li>
+      <ul className={'flex w-full items-center'}>
+        {/* DESKTOP display */}
+        <li>
+          <NavLink to="cryptocurrencies" className={NAVLINK_STYLE}>
+            Cryptocurrencies
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to="stocks" className={NAVLINK_STYLE}>
+            Stocks
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to="portfolio" className={NAVLINK_STYLE}>
+            Portfolio
+          </NavLink>
+        </li>
 
-      <li className={`${NAVLINK_STYLE} text-green-600`}>
-        <NavLink to="login" className="max-sm:hidden">
-          Login
-        </NavLink>
-      </li>
-    </ul>
+        <li className={`${NAVLINK_STYLE} text-green-600`}>
+          <NavLink to="login" className="max-sm:hidden">
+            Login
+          </NavLink>
+        </li>
+      </ul>
+    </div>
   );
 }
 

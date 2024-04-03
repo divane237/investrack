@@ -3,10 +3,9 @@ import NavIcon from './NavIcon';
 
 function NavBar() {
   return (
-    <div className="h-15 flex items-center justify-between bg-stone-600 text-slate-100">
+    <div className={'mb-2 flex items-center bg-stone-100 shadow-lg'}>
       <Logo />
       <NavIcon />
-      {/* <Link className="h-full block bg-red-500">Hello</Link> */}
     </div>
   );
 }
