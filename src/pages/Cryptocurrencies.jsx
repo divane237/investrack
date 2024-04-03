@@ -1,12 +1,12 @@
 import { getCrypto } from '../services/fetchCrypto';
 import CryptoBanner from '../ui/CryptoBanner';
-import ListOfCrypto from '../ui/CryptoItemList';
+import CryptoItemList from '../ui/CryptoItemList';
 
 function Cryptocurrencies() {
   return (
-    <div className="flex flex-col items-start">
+    <div className={''}>
       <CryptoBanner />
-      <ListOfCrypto />
+      <CryptoItemList />
     </div>
   );
 }
