@@ -40,10 +40,10 @@ function CryptoItemList() {
                   </td>
                   <td
                     className={
-                      'space-x-2 border-b-2  p-4 text-xs text-stone-700'
+                      'space-x-2 whitespace-nowrap  border-b-2 p-4 text-xs text-stone-700'
                     }
                   >
-                    {/* <span className={'text-xs'}>ICON </span> */}
+                    <span className={'text-xs'}>ICON </span>
                     <span className={'text-xs'}>{crypto.symbol}</span>
                     <span className={'max-sm:hidden'}>{crypto.name}</span>
                   </td>
@@ -66,12 +66,16 @@ function CryptoItemList() {
                 Price
               </th>
               <th
-                className={'py-3 text-xs font-semibold tracking-wide sm:py-3'}
+                className={
+                  'whitespace-nowrap py-3 text-xs font-semibold tracking-wide sm:py-3'
+                }
               >
                 24h △
               </th>
               <th
-                className={'py-3 text-xs font-semibold tracking-wide sm:py-3'}
+                className={
+                  'whitespace-nowrap py-3 text-xs font-semibold tracking-wide sm:py-3'
+                }
               >
                 7d △
               </th>
@@ -81,11 +85,17 @@ function CryptoItemList() {
                 Market Cap
               </th>
               <th
-                className={'py-3 text-xs font-semibold tracking-wide sm:py-3'}
+                className={
+                  'whitespace-nowrap py-3 text-xs font-semibold tracking-wide sm:py-3'
+                }
               >
                 Circulating Supply
               </th>
-              <th className={'py-3 text-xs font-semibold sm:py-3'}>
+              <th
+                className={
+                  'whitespace-nowrap py-3 text-xs font-semibold sm:py-3'
+                }
+              >
                 Max Supply
               </th>
             </tr>
