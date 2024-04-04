@@ -1,32 +1,18 @@
-import { useLoaderData } from 'react-router';
 import { currencyFormatter, numberFormatter } from '../services/formating';
 
-function CryptoItemList() {
-  // const [cryptos, setCryptos] = useState([]);
-  // const [loading, setLoading] = useState(true);
-  // const [error, setError] = useState(false);
-
-  const { top_50_cryptos } = useLoaderData();
-
-  console.log(top_50_cryptos);
-
+function CryptoItemList({ top_50_cryptos }) {
   return (
     <div className={'flex'}>
-      <div className="flex-[1_1_55%]">
-        <table className={'w-full table-auto  text-right'}>
-          <colgroup>
-            {/* <col className={'bg-green-500 sm:bg-green-100'} />
-            <col className={'bg-red-500'} />
-            <col className={'w-3/5 bg-yellow-500'} /> */}
-          </colgroup>
+      <div className="flex-[1_1_20%]">
+        <table className={'w-full table-auto text-right'}>
           <thead className={'border-b-2 bg-stone-100'}>
             <tr>
-              <th className={'py-3 text-sm font-semibold'}></th>
-              <th className={'py-3 text-sm font-semibold'}>
-                <p>#</p>
+              <th className={'py-3 text-sm font-medium'}></th>
+              <th className={'py-3 text-sm font-medium'}>
+                <p className={'text-center'}>#</p>
               </th>
-              <th className={'py-3 text-sm font-semibold'}>
-                <p className={''}>Name</p>
+              <th className={'py-3 text-sm font-medium'}>
+                <p className={'text-right'}>Name</p>
               </th>
             </tr>
           </thead>
@@ -34,18 +20,24 @@ function CryptoItemList() {
             {top_50_cryptos.map((crypto, i) => {
               return (
                 <tr key={crypto.id}>
-                  <td className={' p-2 text-center text-sm'}>⭐</td>
+                  <td className={'p-2 text-center text-sm'}>⭐</td>
                   <td className={'border-b-2 p-2 text-xs text-stone-700'}>
                     <p>{i + 1}</p>
                   </td>
                   <td
                     className={
-                      'space-x-2 whitespace-nowrap  border-b-2 p-4 text-xs text-stone-700'
+                      'space-x-2 border-b-2 p-4 text-right text-xs text-stone-700'
                     }
                   >
-                    <span className={'text-xs'}>ICON </span>
-                    <span className={'text-xs'}>{crypto.symbol}</span>
-                    <span className={'max-sm:hidden'}>{crypto.name}</span>
+                    <span className={'whitespace-nowrap text-xs'}>ICON </span>
+                    <span className={'whitespace-nowrap text-xs'}>
+                      {crypto.symbol}
+                    </span>
+                    <span
+                      className={'whitespace-nowrap text-right max-sm:hidden'}
+                    >
+                      {crypto.name}
+                    </span>
                   </td>
                 </tr>
               );
@@ -56,52 +48,45 @@ function CryptoItemList() {
 
       {/*  */}
 
-      <div className="flex-[0_0_60%] overflow-x-scroll sm:flex-[0_0_70%]">
+      <div className="flex-[1_1_50%] overflow-x-scroll sm:flex-[1_1_70%]">
         <table className={'w-full table-auto text-right'}>
           <thead className={'border-b-2 bg-stone-100'}>
             <tr>
-              <th
-                className={'py-3 text-sm font-semibold tracking-wide sm:py-3'}
-              >
+              <th className={'py-3 text-sm font-medium tracking-wide sm:py-3'}>
                 Price
               </th>
               <th
                 className={
-                  'whitespace-nowrap py-3 text-xs font-semibold tracking-wide sm:py-3'
+                  'whitespace-nowrap py-3 text-xs font-medium tracking-wide sm:py-3'
                 }
               >
                 24h △
               </th>
               <th
                 className={
-                  'whitespace-nowrap py-3 text-xs font-semibold tracking-wide sm:py-3'
+                  'whitespace-nowrap py-3 text-xs font-medium tracking-wide sm:py-3'
                 }
               >
                 7d △
               </th>
-              <th
-                className={'py-3 text-xs font-semibold tracking-wide sm:py-3'}
-              >
+              <th className={'py-3 text-xs font-medium tracking-wide sm:py-3'}>
                 Market Cap
               </th>
               <th
                 className={
-                  'whitespace-nowrap py-3 text-xs font-semibold tracking-wide sm:py-3'
+                  'whitespace-nowrap py-3 text-xs font-medium tracking-wide sm:py-3'
                 }
               >
                 Circulating Supply
               </th>
               <th
-                className={
-                  'whitespace-nowrap py-3 text-xs font-semibold sm:py-3'
-                }
+                className={'whitespace-nowrap py-3 text-xs font-medium sm:py-3'}
               >
                 Max Supply
               </th>
             </tr>
           </thead>
           <tbody className={'text-right'}>
-            {' '}
             {top_50_cryptos.map((crypto) => {
               return (
                 <tr key={crypto.id} className={'text-right'}>

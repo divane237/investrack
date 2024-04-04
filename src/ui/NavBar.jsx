@@ -1,11 +1,13 @@
 import Logo from './Logo';
-import NavIcon from './NavIcon';
+import NavMenu from './NavMenu';
 
 function NavBar() {
   return (
-    <div className={'z-10 flex w-full items-center bg-stone-100 shadow-lg'}>
+    <div
+      className={'z-10 mb-4 flex w-full items-center bg-stone-100 shadow-lg'}
+    >
       <Logo />
-      <NavIcon />
+      <NavMenu />
     </div>
   );
 }

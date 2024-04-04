@@ -2,12 +2,11 @@ import { NavLink } from 'react-router-dom';
 
 const NAVLINK_STYLE =
   'max-sm:hidden hover:bg-stone-300 hover:py-4 text-xl font-semibold hover:bg-blue-900 px-2 ';
-// const NAVLINK_STYLE = 'max-sm:bg-red-700 bg-green-700';
 
-function NavIcon() {
+function NavMenu() {
   return (
     <div className={''}>
-      <ul className={'flex w-full items-center sm:hidden'}>
+      <ul className={'flex w-full items-center font-medium sm:hidden'}>
         {/* Mobile icons nav bar */}
         <li className={'block px-2 hover:bg-stone-300 hover:py-2.5'}>
           <NavLink className={''}>
@@ -51,4 +50,4 @@ function NavIcon() {
   );
 }
 
-export default NavIcon;
+export default NavMenu;
