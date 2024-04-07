@@ -3,11 +3,15 @@ export default {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
     extend: {
-      fontFamily: {
-        poppins: ['Poppins', 'sans-serif'],
+      keyframes: {
+        loop: {
+          from: { transform: 'translate(0%, -50%)' },
+
+          to: { transform: 'translate(-104%, -50%)' },
+        },
       },
-      flexGrow: {
-        2: '2',
+      animation: {
+        'crypto-loop': 'loop 12s linear infinite',
       },
     },
   },

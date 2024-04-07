@@ -3,9 +3,7 @@ import NavMenu from './NavMenu';
 
 function NavBar() {
   return (
-    <div
-      className={'z-10 mb-4 flex w-full items-center bg-stone-100 shadow-lg'}
-    >
+    <div className={'z-2 mb-2 flex w-full items-center shadow-lg'}>
       <Logo />
       <NavMenu />
     </div>

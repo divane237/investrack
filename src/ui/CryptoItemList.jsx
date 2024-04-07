@@ -88,6 +88,8 @@ function CryptoItemList({ top_50_cryptos }) {
           </thead>
           <tbody className={'text-right'}>
             {top_50_cryptos.map((crypto) => {
+              const dailyChange = crypto.quote.USD.percent_change_24h;
+              const weeklyChange = crypto.quote.USD.percent_change_7d;
               return (
                 <tr key={crypto.id} className={'text-right'}>
                   <td
@@ -99,11 +101,33 @@ function CryptoItemList({ top_50_cryptos }) {
                       {currencyFormatter(crypto.quote.USD.price)}
                     </p>
                   </td>
-                  <td className={'border-b-2 p-4 text-xs text-stone-700'}>
-                    {numberFormatter(crypto.quote.USD.percent_change_24h)}%
+                  <td
+                    className={
+                      dailyChange > 0
+                        ? 'border-b-2 p-4 text-xs text-green-500 '
+                        : dailyChange < 0
+                          ? 'border-b-2 p-4 text-xs text-red-600'
+                          : 'border-b-2 p-4 text-xs text-stone-700'
+                    }
+                  >
+                    {Math.abs(
+                      numberFormatter(crypto.quote.USD.percent_change_24h),
+                    )}
+                    %
                   </td>
-                  <td className={'border-b-2 p-4 text-xs text-stone-700'}>
-                    {numberFormatter(crypto.quote.USD.percent_change_7d)}%
+                  <td
+                    className={
+                      weeklyChange > 0
+                        ? 'border-b-2 p-4 text-xs text-green-500 '
+                        : weeklyChange < 0
+                          ? 'border-b-2 p-4 text-xs text-red-600'
+                          : 'border-b-2 p-4 text-xs text-stone-700'
+                    }
+                  >
+                    {Math.abs(
+                      numberFormatter(crypto.quote.USD.percent_change_7d),
+                    )}
+                    %
                   </td>
                   <td className={'border-b-2 p-4 text-xs text-stone-700'}>
                     {currencyFormatter(crypto.quote.USD.market_cap)}

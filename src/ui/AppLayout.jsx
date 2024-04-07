@@ -4,10 +4,10 @@ import NavBar from './NavBar';
 
 function AppLayout() {
   return (
-    <div>
+    <div className={''}>
       <NavBar />
 
-      <main>
+      <main className={''}>
         <Outlet />
       </main>
       <Footer>Divane Footer</Footer>
