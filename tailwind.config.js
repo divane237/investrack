@@ -7,11 +7,11 @@ export default {
         loop: {
           from: { transform: 'translate(0%, -50%)' },
 
-          to: { transform: 'translate(-104%, -50%)' },
+          to: { transform: 'translate(-100%, -50%)' },
         },
       },
       animation: {
-        'crypto-loop': 'loop 12s linear infinite',
+        'crypto-loop': 'loop 15s linear infinite',
       },
     },
   },

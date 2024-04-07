@@ -5,11 +5,17 @@ function CryptoNotificationAnimation({ top_50_cryptos }) {
   // DISPLAYING JUST THE FIRST 10 CRYPTO CURRENCIES ON THE BANNER
   const top_10_cryptos = top_50_cryptos.slice(0, 10);
 
-  console.log(top_10_cryptos);
-
   return (
-    <div className={'flex w-full space-x-2 overflow-hidden text-xs'}>
-      <ul className={'mt-4 flex animate-crypto-loop items-center space-x-5'}>
+    <div
+      className={
+        'relative left-1/2 top-1/2 flex w-[95%] -translate-x-1/2 gap-x-11 overflow-hidden rounded-full text-xs'
+      }
+    >
+      <ul
+        className={
+          'mt-4 flex animate-crypto-loop items-center gap-x-4 space-x-5'
+        }
+      >
         {top_10_cryptos.map((crypto) => {
           const hourlyChange = numberFormatter(
             crypto.quote.USD.percent_change_1h,
@@ -58,7 +64,12 @@ function CryptoNotificationAnimation({ top_50_cryptos }) {
           );
         })}
       </ul>
-      <ul className={'mt-4 flex animate-crypto-loop items-center space-x-5'}>
+      {/* Second identical element */}
+      <ul
+        className={
+          'mt-4 flex animate-crypto-loop items-center gap-x-4 space-x-5'
+        }
+      >
         {top_10_cryptos.map((crypto) => {
           const hourlyChange = numberFormatter(
             crypto.quote.USD.percent_change_1h,
@@ -107,6 +118,17 @@ function CryptoNotificationAnimation({ top_50_cryptos }) {
           );
         })}
       </ul>
+
+      <div
+        className={
+          'absolute left-0 top-0 block w-[40px] border-none bg-gradient-to-r from-stone-200 to-stone-50 p-3'
+        }
+      ></div>
+      <div
+        className={
+          'absolute right-0 top-0 block w-[40px] border-none bg-gradient-to-r from-stone-200 to-stone-50 p-3'
+        }
+      ></div>
     </div>
   );
 }
