@@ -10,7 +10,7 @@ function AppLayout() {
       <main className={''}>
         <Outlet />
       </main>
-      <Footer>Divane Footer</Footer>
+      <Footer></Footer>
     </div>
   );
 }

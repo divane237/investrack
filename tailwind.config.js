@@ -7,7 +7,7 @@ export default {
         loop: {
           from: { transform: 'translate(0%, -50%)' },
 
-          to: { transform: 'translate(-100%, -50%)' },
+          to: { transform: 'translate(-70%, -50%)' },
         },
       },
       animation: {

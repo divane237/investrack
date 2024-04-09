@@ -1,11 +1,11 @@
 import CryptoNotificationAnimation from './CryptoNotificationAnimation';
-
-function CryptoBanner({ top_50_cryptos }) {
+import CryptoNews from './CryptoNews';
+function CryptoBanner({ top_50_cryptos, news }) {
   return (
-    <>
+    <div className={''}>
       <CryptoNotificationAnimation top_50_cryptos={top_50_cryptos} />
-      <div>News slider</div>
-    </>
+      <CryptoNews news={news} />
+    </div>
   );
 }
 

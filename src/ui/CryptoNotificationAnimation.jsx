@@ -8,12 +8,12 @@ function CryptoNotificationAnimation({ top_50_cryptos }) {
   return (
     <div
       className={
-        'relative left-1/2 top-1/2 flex w-[95%] -translate-x-1/2 gap-x-11 overflow-hidden rounded-full text-xs'
+        'group relative left-1/2 top-1/2 flex -translate-x-1/2 gap-9 overflow-hidden rounded-full bg-stone-200 text-xs hover:cursor-pointer'
       }
     >
       <ul
         className={
-          'mt-4 flex animate-crypto-loop items-center gap-x-4 space-x-5'
+          'ml-10 mt-4 flex animate-crypto-loop items-center gap-x-4 space-x-5 group-hover:cursor-pointer group-hover:[animation-play-state:paused]'
         }
       >
         {top_10_cryptos.map((crypto) => {
@@ -67,7 +67,7 @@ function CryptoNotificationAnimation({ top_50_cryptos }) {
       {/* Second identical element */}
       <ul
         className={
-          'mt-4 flex animate-crypto-loop items-center gap-x-4 space-x-5'
+          'mt-4 flex animate-crypto-loop items-center gap-x-4 space-x-5 group-hover:cursor-pointer group-hover:[animation-play-state:paused]'
         }
       >
         {top_10_cryptos.map((crypto) => {
@@ -121,12 +121,12 @@ function CryptoNotificationAnimation({ top_50_cryptos }) {
 
       <div
         className={
-          'absolute left-0 top-0 block w-[40px] border-none bg-gradient-to-r from-stone-200 to-stone-50 p-3'
+          'absolute left-0 top-0 block w-[40px] border-none bg-gradient-to-r from-stone-50 to-stone-200 p-4'
         }
       ></div>
       <div
         className={
-          'absolute right-0 top-0 block w-[40px] border-none bg-gradient-to-r from-stone-200 to-stone-50 p-3'
+          'absolute right-0 top-0 block w-[40px] border-none bg-gradient-to-l from-stone-50 to-stone-200 p-4'
         }
       ></div>
     </div>

@@ -2,7 +2,7 @@ import { currencyFormatter, numberFormatter } from '../services/formating';
 
 function CryptoItemList({ top_50_cryptos }) {
   return (
-    <div className={'flex'}>
+    <div className={'mt-6 flex'}>
       <div className="flex-[1_1_20%]">
         <table className={'w-full table-auto text-right'}>
           <thead className={'border-b-2 bg-stone-100'}>
@@ -48,7 +48,7 @@ function CryptoItemList({ top_50_cryptos }) {
 
       {/*  */}
 
-      <div className="flex-[1_1_50%] overflow-x-scroll sm:flex-[1_1_70%]">
+      <div className="flex-[1_1_50%] overflow-hidden hover:overflow-x-scroll sm:flex-[1_1_70%]">
         <table className={'w-full table-auto text-right'}>
           <thead className={'border-b-2 bg-stone-100'}>
             <tr>
