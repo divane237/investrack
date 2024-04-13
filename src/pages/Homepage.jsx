@@ -1,5 +1,12 @@
+import HomeContent from '../ui/HomeContent';
+
 function Homepage() {
-  return <div>Homepage</div>;
+  return (
+    <div>
+      {' '}
+      <HomeContent />
+    </div>
+  );
 }
 
 export default Homepage;
