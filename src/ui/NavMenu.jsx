@@ -68,6 +68,11 @@ function NavMenu() {
       {/* DESKTOP display */}
       <ul className={'flex w-full items-center'}>
         <li>
+          <NavLink to="Home" className={NAVLINK_STYLE}>
+            Home
+          </NavLink>
+        </li>
+        <li>
           <NavLink to="cryptocurrencies" className={NAVLINK_STYLE}>
             Cryptocurrencies
           </NavLink>
