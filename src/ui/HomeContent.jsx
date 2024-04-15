@@ -54,7 +54,7 @@ function HomeContent() {
 
       <div
         className={
-          'flex flex-col items-center justify-center gap-y-8 md:flex-row md:justify-around'
+          'mx-4 flex flex-col items-center justify-center gap-y-8 md:flex-row md:justify-around'
         }
       >
         {/* Second section */}
@@ -65,9 +65,9 @@ function HomeContent() {
           <div className="mb-2 h-[150px] w-[150px] overflow-hidden">
             <img src="/images/it-icons-fast.png" alt="account creation" />
           </div>
-          <div>
+          <div className={''}>
             <h1 className={'text-xl font-semibold'}>Get Started Fast</h1>
-            <p className={'text-sm'}>
+            <p className={'text-center text-sm'}>
               Signup fast and begin getting instant notifications
             </p>
           </div>
@@ -78,12 +78,14 @@ function HomeContent() {
           <div className="mb-2 h-[150px] w-[150px] overflow-hidden">
             <img src="/images/monitor-your-money.jpg" alt="account creation" />
           </div>
-          <div>
+          <div className={'px-6'}>
             <h1 className={'text-xl font-semibold'}>
               Personal Portfolio Management
             </h1>
-            <p className={'text-sm'}>
-              Signup fast and begin getting instant notifications
+            <p className={'text-center text-sm'}>
+              Monitor portfolio performance metrics, receive timely
+              notifications for significant portfolio events and market
+              movements.
             </p>
           </div>
         </div>
@@ -97,10 +99,10 @@ function HomeContent() {
               className={'rounded-[20rem]'}
             />
           </div>
-          <div>
+          <div className={''}>
             <h1 className={'text-xl font-semibold '}>Specific Assets</h1>
-            <p className={'text-sm'}>
-              Signup fast and begin getting instant notifications
+            <p className={'text-center text-sm'}>
+              You decide on what you want to follow.
             </p>
           </div>
         </div>

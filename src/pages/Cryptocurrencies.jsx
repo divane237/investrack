@@ -9,6 +9,7 @@ function Cryptocurrencies() {
   return (
     <div className={''}>
       <CryptoBanner top_50_cryptos={top_50_cryptos} news={news} />
+
       <CryptoItemList top_50_cryptos={top_50_cryptos} />
     </div>
   );

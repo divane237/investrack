@@ -2,7 +2,9 @@ function Footer() {
   const date = new Date().getFullYear();
   return (
     <footer
-      className={'mt-2 bg-stone-400 p-2 text-base text-white md:text-base'}
+      className={
+        'mt-2 bg-stone-400 p-2 text-base text-white md:flex md:items-center md:justify-center md:gap-16 md:text-base'
+      }
     >
       <p className={'text-center'}>Copyright @ {date} Divane Jeugo</p>
 
