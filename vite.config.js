@@ -8,5 +8,8 @@ export default defineConfig({
     proxy: {
       '/api': 'http://localhost:5050', // Forward requests starting with /api to your backend server
     },
+    hmr: {
+      overlay: false,
+    },
   },
 });
