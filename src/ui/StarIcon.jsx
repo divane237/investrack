@@ -30,7 +30,6 @@ function StarIcon({
   function handleMouse() {
     // Starred star return nothing
     if (star[0] === '#EEBD0D') {
-      console.log("Didn't return anything because starred");
       return;
     }
 
