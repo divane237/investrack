@@ -3,25 +3,22 @@ import { useState } from 'react';
 function StarIcon({
   onClick,
   size = [20, 20],
-  initial = ['#FFF', '#DAD8D8'],
-  // First color represent fill, second color represent stroke
-  final = ['#EEBD0D', '#EEBD0D'],
-  hovering = ['#FFF', '#EEBD0D'],
   hoverMsg = 'Not starred yet',
   starredMsg = 'Already starred',
   strokeWidth = 2,
 }) {
-  const [star, setStar] = useState(initial);
+  // First color represent fill, second color represent stroke
+  const [star, setStar] = useState(['#FFF', '#DAD8D8']);
   const [tempStar, setTempStar] = useState(['', '']);
   const starred = star[1] === star[0];
 
   // #EEBD0D gold
   function handleClick() {
     if (star[0] === '#FFF') {
-      setStar((star) => (star = final));
+      setStar((star) => (star = ['#EEBD0D', '#EEBD0D']));
     } else {
       setStar((star) => {
-        const newStar = hovering;
+        const newStar = ['#FFF', '#EEBD0D'];
         return newStar;
       });
     }
@@ -43,7 +40,7 @@ function StarIcon({
       });
     } else {
       setTempStar((temp) => {
-        const newTemp = initial;
+        const newTemp = ['#FFF', '#DAD8D8'];
         setStar(newTemp);
         return newTemp;
       });
@@ -57,7 +54,7 @@ function StarIcon({
         height={size[1]}
         viewBox="0 0 25 23"
         onClick={handleClick}
-        className={'hover:cursor-pointer'}
+        className={'z-50 hover:cursor-pointer'}
         onMouseEnter={handleMouse}
         onMouseLeave={handleMouse}
       >
@@ -68,11 +65,8 @@ function StarIcon({
           strokeWidth={strokeWidth}
         />
       </svg>
-      <p
-        className={
-          "absolute left-0 top-[-5px] hidden translate-x-6 rounded-lg bg-slate-300 p-1 text-xs before:absolute before:left-0 before:top-[6px] before:-translate-x-[0.7rem] before:border-[6px] before:border-y-transparent before:border-l-transparent before:border-r-slate-300 before:content-[''] group-hover:block"
-        }
-      >
+
+      <p className="absolute left-[175%] top-[50%] hidden -translate-y-1/2 whitespace-nowrap rounded-lg bg-slate-400 px-1.5 py-1 text-xs before:absolute before:left-[-14px]  before:top-1 before:border-[8px] before:border-y-transparent before:border-l-transparent before:border-r-slate-400 before:content-[''] group-hover:block ">
         {starred ? starredMsg : hoverMsg}
       </p>
     </button>
@@ -80,7 +74,3 @@ function StarIcon({
 }
 
 export default StarIcon;
-
-// absolute left-full top-[50%] ml-2 hidden -translate-y-1/2 translate-x-[2%] whitespace-nowrap rounded-lg bg-slate-400 p-2 text-xs group-hover:block
-
-//  after:-translate-x-5 after:translate-y-1

@@ -29,7 +29,7 @@ function CryptoItemList({ top_50_cryptos }) {
          */}
         <div
           className={
-            'sm:overflow-x-none flex overflow-x-scroll md:gap-10 lg:ml-40'
+            'flex overflow-x-scroll sm:overflow-x-hidden md:gap-10 lg:ml-40'
           }
         >
           <Button>

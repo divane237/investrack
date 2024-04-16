@@ -37,7 +37,7 @@ function CryptoNews({ news }) {
 
   return (
     // Outer div
-    <div className={'relative h-[125px] p-3 md:mb-[5vw]'}>
+    <div className={'relative mb-10 h-[125px] p-3 md:mb-[5vw]'}>
       {/* Inner div controlling the image */}
       <div className={'relative'}>
         <h1 className={'text-center text-xs font-semibold lg:text-sm'}>
@@ -49,7 +49,11 @@ function CryptoNews({ news }) {
           </span>
           , {news[currentSlide].pubDate}
         </p>
-        <a href={news[currentSlide].link} target="_blank">
+        <a
+          href={news[currentSlide].link}
+          target="_blank"
+          className={'overflow-hidden'}
+        >
           <img
             src={news[currentSlide].image_url}
             className={
