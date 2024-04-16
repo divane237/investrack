@@ -22,7 +22,7 @@ export async function getNews() {
     if (!res.ok) throw new Error('News data could not be fetched');
 
     const data = await res.json();
-    console.log(data.results);
+
     return data.results;
   } catch (error) {
     console.error('There was a problem with the news fetch operation', error);

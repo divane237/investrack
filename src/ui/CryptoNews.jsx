@@ -35,7 +35,6 @@ function CryptoNews({ news }) {
     setCurrentSlide((cur) => (cur = newSlide));
   }
 
-  console.log(news);
   return (
     // Outer div
     <div className={'relative h-[125px] p-3 md:mb-[5vw]'}>

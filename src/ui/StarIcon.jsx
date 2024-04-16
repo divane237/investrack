@@ -68,7 +68,11 @@ function StarIcon({
           strokeWidth={strokeWidth}
         />
       </svg>
-      <p className="absolute left-full top-[50%] ml-2 hidden -translate-y-1/2 translate-x-[2%] whitespace-nowrap rounded-lg bg-slate-400 p-2 text-xs group-hover:block">
+      <p
+        className={
+          "absolute left-0 top-[-5px] hidden translate-x-6 rounded-lg bg-slate-300 p-1 text-xs before:absolute before:left-0 before:top-[6px] before:-translate-x-[0.7rem] before:border-[6px] before:border-y-transparent before:border-l-transparent before:border-r-slate-300 before:content-[''] group-hover:block"
+        }
+      >
         {starred ? starredMsg : hoverMsg}
       </p>
     </button>
@@ -76,3 +80,7 @@ function StarIcon({
 }
 
 export default StarIcon;
+
+// absolute left-full top-[50%] ml-2 hidden -translate-y-1/2 translate-x-[2%] whitespace-nowrap rounded-lg bg-slate-400 p-2 text-xs group-hover:block
+
+//  after:-translate-x-5 after:translate-y-1
