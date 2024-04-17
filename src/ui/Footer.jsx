@@ -3,7 +3,7 @@ function Footer() {
   return (
     <footer
       className={
-        'mt-2 bg-stone-400 p-2 text-base text-white md:flex md:items-center md:justify-center md:gap-16 md:text-base'
+        'mt-2 flex place-items-center justify-center bg-stone-200 p-2 text-base text-black md:flex md:items-center md:justify-center md:gap-16 md:text-base'
       }
     >
       <p className={'text-center'}>Copyright @ {date} Divane Jeugo</p>
