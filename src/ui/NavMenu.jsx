@@ -1,18 +1,27 @@
+import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
-// Menu icon heigh h-8 w-10
-// login icon w-10
+import Footer from './Footer';
+import Logo from './Logo';
+
 const NAVLINK_STYLE =
   'max-sm:hidden hover:bg-stone-300 hover:py-3 md:text-base lg:text-lg font-semibold px-2';
 
 function NavMenu() {
+  const [mobileMenu, setMobileMenu] = useState(false);
+
   return (
-    <div className={''}>
+    <div>
       {/* Mobile icons nav bar */}
       <ul className={'flex w-full items-center font-medium sm:hidden'}>
-        <li className={'block px-2 hover:bg-stone-300 hover:py-2.5'}>
-          <NavLink>
+        <li className={'block px-2 hover:bg-stone-300 hover:py-[0.7rem]'}>
+          <a
+            onClick={() => {
+              setMobileMenu(!mobileMenu);
+              console.log(mobileMenu);
+            }}
+          >
             <span>
-              <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+              <svg width="26" height="26" viewBox="0 0 28 28" fill="none">
                 <g>
                   <circle cx="4" cy="4" r="4" fill="#282323" />
                   <circle cx="24" cy="24" r="4" fill="#282323" />
@@ -31,7 +40,7 @@ function NavMenu() {
                 </defs>
               </svg>
             </span>
-          </NavLink>
+          </a>
         </li>
         {/*  */}
         <li className={'px-2 hover:bg-stone-300 hover:py-3'}>
@@ -65,6 +74,38 @@ function NavMenu() {
         </li>
       </ul>
 
+      {/* Mobile Menu */}
+      {mobileMenu && (
+        <div
+          className={
+            'absolute left-0 top-[3rem] z-50 min-h-[100vh] w-full overscroll-none bg-slate-400'
+          }
+        >
+          <div className="flex">
+            <Logo />
+            <p>X</p>
+          </div>
+          <ul>
+            <li>
+              <NavLink>Home</NavLink>
+            </li>
+            <li>
+              <NavLink>Cryptocurrencies</NavLink>
+            </li>
+            <li>
+              <NavLink>Stocks</NavLink>
+            </li>
+            <li>
+              <NavLink>Portfolio</NavLink>
+            </li>
+          </ul>
+          <p>English</p> <p>☀</p>
+          <Footer />
+        </div>
+      )}
+
+      {/*  */}
+
       {/* DESKTOP display */}
       <ul className={'flex w-full items-center'}>
         <li>
@@ -90,7 +131,7 @@ function NavMenu() {
 
         <li
           className={
-            'px-2 font-semibold hover:bg-stone-300 hover:py-3 max-sm:hidden md:text-base lg:text-lg'
+            'px-2 font-semibold hover:bg-stone-300 hover:py-2.5 max-sm:hidden md:text-base lg:text-lg'
           }
         >
           <NavLink to="login">Login</NavLink>

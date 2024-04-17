@@ -54,7 +54,7 @@ function HomeContent() {
 
       <div
         className={
-          'mx-4 flex flex-col items-center justify-center gap-y-8 md:flex-row md:justify-around'
+          'mx-4 flex flex-col items-center justify-center gap-y-8 md:flex-row md:items-stretch md:justify-around'
         }
       >
         {/* Second section */}
@@ -66,7 +66,7 @@ function HomeContent() {
             <img src="/images/it-icons-fast.png" alt="account creation" />
           </div>
           <div className={''}>
-            <h1 className={'text-xl font-semibold'}>Get Started Fast</h1>
+            <h1 className={'text-base font-semibold'}>Get Started Fast</h1>
             <p className={'text-center text-sm'}>
               Signup fast and begin getting instant notifications
             </p>
@@ -79,10 +79,10 @@ function HomeContent() {
             <img src="/images/monitor-your-money.jpg" alt="account creation" />
           </div>
           <div className={'px-6'}>
-            <h1 className={'text-xl font-semibold'}>
+            <h1 className={'text-base font-semibold'}>
               Personal Portfolio Management
             </h1>
-            <p className={'text-center text-sm'}>
+            <p className={'text-sm'}>
               Monitor portfolio performance metrics, receive timely
               notifications for significant portfolio events and market
               movements.
@@ -100,7 +100,7 @@ function HomeContent() {
             />
           </div>
           <div className={''}>
-            <h1 className={'text-xl font-semibold '}>Specific Assets</h1>
+            <h1 className={'text-base font-semibold '}>Specific Assets</h1>
             <p className={'text-center text-sm'}>
               You decide on what you want to follow.
             </p>
