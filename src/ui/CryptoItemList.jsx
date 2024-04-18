@@ -1,8 +1,10 @@
+import { useLoaderData } from 'react-router';
 import { currencyFormatter, numberFormatter } from '../services/formating';
 import Button from './Button';
 import StarIcon from './StarIcon';
 
-function CryptoItemList({ top_50_cryptos }) {
+function CryptoItemList() {
+  const { top_50_cryptos } = useLoaderData();
   return (
     <>
       <div className={'mx-4 mt-10 flex items-center'}>

@@ -1,16 +1,13 @@
-import { useLoaderData } from 'react-router';
 import { getCrypto, getNews } from '../services/fetchCrypto';
 import CryptoBanner from '../ui/CryptoBanner';
 import CryptoItemList from '../ui/CryptoItemList';
 
 function Cryptocurrencies() {
-  const { top_50_cryptos, news } = useLoaderData();
-
   return (
     <div className={''}>
-      <CryptoBanner top_50_cryptos={top_50_cryptos} news={news} />
+      <CryptoBanner />
 
-      <CryptoItemList top_50_cryptos={top_50_cryptos} />
+      <CryptoItemList />
     </div>
   );
 }

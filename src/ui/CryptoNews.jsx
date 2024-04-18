@@ -39,7 +39,7 @@ function CryptoNews({ news }) {
     // Outer div
     <div className={'relative mb-10 h-[125px] p-3 md:mb-[5vw]'}>
       {/* Inner div controlling the image */}
-      <div className={'relative'}>
+      <a className={'relative'} href={news[currentSlide].link} target="_blank">
         <h1 className={'text-center text-xs font-semibold lg:text-sm'}>
           {news[currentSlide].title}
         </h1>
@@ -57,11 +57,11 @@ function CryptoNews({ news }) {
           <img
             src={news[currentSlide].image_url}
             className={
-              'absolute left-1/2 h-fit w-1/4 -translate-x-1/2 hover:cursor-pointer sm:h-[80px] md:h-[100px]'
+              'absolute left-1/2 h-[6rem] w-1/4 -translate-x-1/2 hover:cursor-pointer sm:h-[80px] md:h-[100px]'
             }
           />
         </a>
-      </div>
+      </a>
 
       {/* Chevron left and right */}
       <div

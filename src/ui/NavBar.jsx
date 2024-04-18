@@ -8,6 +8,8 @@ const NAVLINK_STYLE =
   'max-sm:hidden py-2.5 hover:bg-stone-300 hover:py-2.5 md:text-base lg:text-lg px-2 inline-block transition-all duration-300 ease-in-out  font-medium';
 
 function NavBar() {
+  // Disble the background content once redux is installed
+  // in Global state.
   const [mobileMenu, setMobileMenu] = useState(false);
 
   function handleMobileMenuToggle() {
@@ -107,7 +109,7 @@ function NavBar() {
                 <Logo />
                 <button
                   className={
-                    'px-4 py-2 text-2xl font-semibold text-red-500 hover:cursor-pointer hover:text-[1.6rem]'
+                    'px-4 py-2 text-2xl font-semibold text-red-500 hover:cursor-pointer hover:text-[1.8rem]'
                   }
                   onClick={removeMobileMenu}
                 >
