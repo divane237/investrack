@@ -5,14 +5,16 @@ import NavBar from './NavBar';
 
 function AppLayout() {
   return (
-    <div className={''}>
+    <>
       <NavBar />
 
       <main className={''}>
         <Outlet />
       </main>
-      <Footer></Footer>
-    </div>
+      <div className="fixed bottom-0 w-full">
+        <Footer></Footer>
+      </div>
+    </>
   );
 }
 // Nothing

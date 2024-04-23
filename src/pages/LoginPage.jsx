@@ -1,7 +1,11 @@
-import StarIcon from '../ui/StarIcon';
+import Dashboard1 from '../ui/Dashboard1';
 
 function LoginPage() {
-  return <div>Login</div>;
+  return (
+    <>
+      <Dashboard1 />
+    </>
+  );
 }
 
 export default LoginPage;

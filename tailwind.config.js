@@ -9,9 +9,18 @@ export default {
 
           to: { transform: 'translate(-70%, -50%)' },
         },
+        menu: {
+          '0%': {
+            transform: 'translateX(-50%)',
+          },
+          '100%': {
+            transform: 'translateX(0%)',
+          },
+        },
       },
       animation: {
         'crypto-loop': 'loop 15s linear infinite',
+        'mobile-menu': 'menu 0.3s linear',
       },
     },
   },
