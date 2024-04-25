@@ -1,4 +1,49 @@
+import { useState } from 'react';
+import { Reorder } from 'framer-motion';
+import DashboardAssetItems from './DashboardAssetItems';
+
+const initialItems = [
+  {
+    name: 'Bitcoin',
+    category: 'crypto',
+    worth: 100,
+    notification: 'alert',
+  },
+  {
+    name: 'Ethereum',
+    category: 'crypto',
+    worth: 300,
+    notification: 'alert',
+  },
+  {
+    name: 'Tesla',
+    category: 'stock',
+    worth: 500,
+    notification: 'none',
+  },
+  {
+    name: 'Microsoft',
+    category: 'stock',
+    worth: 100,
+    notification: 'none',
+  },
+  {
+    name: 'Apple',
+    category: 'stock',
+    worth: 500,
+    notification: 'alert',
+  },
+  {
+    name: 'Cardano',
+    category: 'crypto',
+    worth: 50,
+    notification: 'none',
+  },
+];
+
 function Dashboard() {
+  const [items, setItems] = useState(initialItems);
+
   return (
     <div className="mb-3 ml-1 mr-1 mt-4">
       <div className="flex w-full">
@@ -19,9 +64,9 @@ function Dashboard() {
 
       {/* Table displaying assets */}
 
-      <div className="mt-2 flex items-center ">
-        <h1 className="basis-1/4 border-x-2 px-6">Name</h1>
-        <h1 className="basis-1/4 border-x-2 px-6">
+      <div className="mb-1 mt-2 flex items-center">
+        <h1 className="basis-1/4 border-x-2 px-6 text-center">Name</h1>
+        <h1 className="flex basis-1/4 justify-center border-r-2 px-6">
           <p className="max-sm:hidden">Category</p>{' '}
           <span className="sm:hidden">
             <svg width="25" height="25" viewBox="0 0 15 15" fill="none">
@@ -34,11 +79,11 @@ function Dashboard() {
             </svg>
           </span>
         </h1>
-        <h1 className="basis-1/4 border-x-2 px-6">
+        <h1 className="flex basis-1/4 justify-center px-6">
           <p className="max-sm:hidden">Worth ($)</p>{' '}
           <span className="cursor-default text-xl sm:hidden">💲</span>
         </h1>
-        <h1 className="basis-1/4 border-x-2 px-6">
+        <h1 className="flex basis-1/4 justify-center border-x-2 px-6">
           <p className="max-sm:hidden">Notification</p>
           <span className="sm:hidden">
             <svg width="25" height="25" viewBox="0 0 15 15" fill="none">
@@ -52,6 +97,15 @@ function Dashboard() {
           </span>{' '}
         </h1>
       </div>
+
+      {/*  */}
+      <Reorder.Group axis="y" values={items} onReorder={setItems}>
+        {/* <ul className="flex flex-col bg-blue-200"> */}
+        {items.map((item) => {
+          return <DashboardAssetItems key={item.name} item={item} />;
+        })}
+        {/* </ul> */}
+      </Reorder.Group>
     </div>
   );
 }
