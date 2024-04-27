@@ -1,6 +1,7 @@
 import { getCrypto, getNews } from '../services/fetchCrypto';
 import CryptoBanner from '../ui/CryptoBanner';
 import CryptoItemList from '../ui/CryptoItemList';
+import Footer from '../ui/Footer';
 
 function Cryptocurrencies() {
   return (
@@ -8,6 +9,10 @@ function Cryptocurrencies() {
       <CryptoBanner />
 
       <CryptoItemList />
+
+      <div className="-tanslate-y-full static bottom-0 w-full">
+        <Footer></Footer>
+      </div>
     </div>
   );
 }

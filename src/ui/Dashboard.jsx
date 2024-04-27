@@ -5,36 +5,42 @@ import DashboardAssetItems from './DashboardAssetItems';
 const initialItems = [
   {
     name: 'Bitcoin',
+    symbol: 'BTC',
     category: 'crypto',
     worth: 100,
     notification: 'alert',
   },
   {
     name: 'Ethereum',
+    symbol: 'ETH',
     category: 'crypto',
     worth: 300,
     notification: 'alert',
   },
   {
     name: 'Tesla',
+    symbol: 'TSLA',
     category: 'stock',
     worth: 500,
     notification: 'none',
   },
   {
     name: 'Microsoft',
+    symbol: 'MSFT',
     category: 'stock',
     worth: 100,
     notification: 'none',
   },
   {
     name: 'Apple',
+    symbol: 'AAPL',
     category: 'stock',
     worth: 500,
     notification: 'alert',
   },
   {
-    name: 'Cardano',
+    name: 'Solana',
+    symbol: 'SOL',
     category: 'crypto',
     worth: 50,
     notification: 'none',

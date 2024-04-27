@@ -1,11 +1,5 @@
-import Dashboard1 from '../ui/Dashboard1';
-
 function LoginPage() {
-  return (
-    <>
-      <Dashboard1 />
-    </>
-  );
+  return <>Login</>;
 }
 
 export default LoginPage;

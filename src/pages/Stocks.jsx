@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import Footer from '../ui/Footer';
 
 function Stocks() {
   useEffect(function () {
@@ -14,7 +15,14 @@ function Stocks() {
     getStocks();
   }, []);
 
-  return <div>Stocks</div>;
+  return (
+    <div>
+      Stocks
+      <div className="-tanslate-y-full static bottom-0 w-full">
+        <Footer></Footer>
+      </div>
+    </div>
+  );
 }
 
 export default Stocks;

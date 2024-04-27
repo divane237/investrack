@@ -11,9 +11,6 @@ function AppLayout() {
       <main className={''}>
         <Outlet />
       </main>
-      <div className="fixed bottom-0 w-full">
-        <Footer></Footer>
-      </div>
     </>
   );
 }

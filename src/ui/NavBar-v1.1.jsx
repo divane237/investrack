@@ -197,7 +197,8 @@ function NavBar() {
                   {/*  */}
 
                   <div
-                    className={`${darkMode ? 'animate-dark-mode' : 'animate-light-mode'} absolute left-0 top-1/2 mx-2 h-[3rem] w-[3rem] -translate-y-1/2 rounded-full px-2 py-2`}
+                    data-darkMode={darkMode}
+                    className={`data-[darkMode=false]:animate-light-mode data-[darkMode=true]:animate-dark-mode absolute top-1/2 mx-2 h-[3rem] w-[3rem] -translate-y-1/2 rounded-full px-2 py-2 data-[darkMode=false]:bg-yellow-500 data-[darkMode=true]:bg-purple-600`}
                   ></div>
                 </div>
               </div>

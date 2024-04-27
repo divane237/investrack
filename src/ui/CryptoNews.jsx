@@ -37,7 +37,7 @@ function CryptoNews({ news }) {
 
   return (
     // Outer div
-    <div className={'relative mb-10 h-[125px] p-3 md:mb-[5vw]'}>
+    <div className={'group relative mb-10 h-[125px] p-3 md:mb-[5vw]'}>
       {/* Inner div controlling the image */}
       <a className={'relative'} href={news[currentSlide].link} target="_blank">
         <h1 className={'text-center text-xs font-semibold lg:text-sm'}>
@@ -57,7 +57,7 @@ function CryptoNews({ news }) {
           <img
             src={news[currentSlide].image_url}
             className={
-              'absolute left-1/2 h-[6rem] w-1/4 -translate-x-1/2 hover:cursor-pointer sm:h-[80px] md:h-[100px]'
+              'absolute left-1/2 mb-3 aspect-[2/1] w-[40%] -translate-x-1/2 hover:cursor-pointer sm:h-[80px] md:h-[100px]'
             }
           />
         </a>
@@ -66,7 +66,7 @@ function CryptoNews({ news }) {
       {/* Chevron left and right */}
       <div
         className={
-          'absolute bottom-0 right-0 z-10 -translate-y-1/2 transition-all duration-300 ease-in-out hover:cursor-pointer hover:rounded-full hover:bg-stone-100'
+          'absolute bottom-0 right-0 z-10 -translate-y-1/2 transition-all duration-300 ease-in-out group-hover:cursor-pointer group-hover:rounded-full group-hover:bg-stone-200'
         }
         onClick={showNextSlide}
       >
@@ -81,7 +81,7 @@ function CryptoNews({ news }) {
       </div>
       <div
         className={
-          'absolute bottom-0 left-0 z-10 -translate-y-1/2 transition-all  duration-300 ease-in-out hover:cursor-pointer hover:rounded-full hover:bg-stone-100'
+          'absolute bottom-0 left-0 z-10 -translate-y-1/2 transition-all  duration-300 ease-in-out group-hover:cursor-pointer group-hover:rounded-full group-hover:bg-stone-200'
         }
         onClick={showPreviousSlide}
       >
