@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import { Reorder } from 'framer-motion';
 import DashboardAssetItems from './DashboardAssetItems';
 
@@ -49,6 +49,7 @@ const initialItems = [
 
 function Dashboard() {
   const [items, setItems] = useState(initialItems);
+  const constraintsRef = useRef(null);
 
   return (
     <div className="mb-3 ml-1 mr-1 mt-4">
@@ -70,7 +71,7 @@ function Dashboard() {
 
       {/* Table displaying assets */}
 
-      <div className="mb-1 mt-2 flex items-center">
+      <div className="mb-1 ml-7 mt-2 flex items-center lg:ml-8">
         <h1 className="basis-1/4 border-x-2 px-6 text-center">Name</h1>
         <h1 className="flex basis-1/4 justify-center border-r-2 px-6">
           <p className="max-sm:hidden">Category</p>{' '}
@@ -105,12 +106,10 @@ function Dashboard() {
       </div>
 
       {/*  */}
-      <Reorder.Group axis="y" values={items} onReorder={setItems}>
-        {/* <ul className="flex flex-col bg-blue-200"> */}
+      <Reorder.Group values={items} onReorder={setItems}>
         {items.map((item) => {
           return <DashboardAssetItems key={item.name} item={item} />;
         })}
-        {/* </ul> */}
       </Reorder.Group>
     </div>
   );

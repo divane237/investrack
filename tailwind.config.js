@@ -50,16 +50,34 @@ export default {
             opacity: 0.7,
           },
         },
+        'show-password': {
+          '0%': {
+            transform: 'translateY(10%)',
+          },
+          '100%': {
+            transform: 'translateY(-50%)',
+          },
+        },
+        'hide-password': {
+          '0%': {
+            transform: 'translateY(0)',
+          },
+          '100%': {
+            transform: 'translateY(50%)',
+          },
+        },
       },
       animation: {
         'crypto-loop': 'loop 15s linear infinite',
         'mobile-menu': 'menu 0.3s linear',
-        'light-mode': 'light-mode 0.3s ease-in-out 0s forwards',
-        'dark-mode': 'dark-mode 0.2s ease-in-out 0s forwards',
+        'light-mode':
+          'light-mode 0.3s cubic-bezier(0.1, -0.6, 0.2, 0) 0s forwards',
+        'dark-mode':
+          'dark-mode 0.2s cubic-bezier(0.1, -0.6, 0.2, 0) 0s forwards',
+        'show-password': 'show-password 0.3s ease-in-out forwards',
+        'hide-password': 'hide-password 0.1s ease-in-out forwards',
       },
     },
   },
   plugins: [],
 };
-// 'light-mode': 'lightMode 5s linear0.1s normal forwards',
-// 'dark-mode': 'darkMode 5s linear  0.1s normal forwards',
