@@ -8,7 +8,6 @@ function Portfolio() {
       <Dashboard />
 
       <div className="-tanslate-y-full fixed bottom-0 w-full">
-        <DeleteIconButton fill={true} color={'red'} />
         <Footer></Footer>
       </div>
     </div>

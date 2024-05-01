@@ -4,10 +4,9 @@ function Signup() {
   const [hidePassword, setHidePassword] = useState();
   return (
     <div>
-      SignUp
       <form
         action=""
-        className="absolute left-1/2 top-1/2 flex w-2/3 -translate-x-1/2 -translate-y-1/2 flex-col items-stretch gap-y-10 rounded-3xl border-2 px-8 py-9 text-gray-100 backdrop-blur-md sm:w-[400px]"
+        className="absolute left-1/2 top-1/2 mt-10 flex w-4/5 -translate-x-1/2 -translate-y-1/2 flex-col items-stretch gap-y-10 rounded-3xl border-2 px-8 py-9 text-gray-100 backdrop-blur-md sm:w-[400px]"
       >
         {/* Full name  */}
         <section className="relative flex">
@@ -104,7 +103,7 @@ function Signup() {
             {/* Show password svg */}
             <span
               onClick={() => setHidePassword(!hidePassword)}
-              className={`${hidePassword ? 'hidden' : 'animate-show-password'} absolute right-10 right-8 top-6 px-2 pb-1 pt-1 hover:cursor-pointer`}
+              className={`${hidePassword ? 'hidden' : 'animate-show-password'} absolute right-8 top-6 px-2 pb-1 pt-1 hover:cursor-pointer`}
             >
               <svg width="15" height="15" viewBox="0 0 15 15" fill="none">
                 <path
@@ -188,7 +187,7 @@ function Signup() {
 
         <section>
           <button className="w-full rounded-full border-[1px] bg-white px-2 py-1 text-black hover:bg-stone-100 focus:border-none focus:bg-stone-100 focus:outline-none focus:ring focus:ring-white">
-            Submit
+            Signup
           </button>
         </section>
       </form>

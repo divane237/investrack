@@ -14,6 +14,8 @@ import LoginPage from './pages/LoginPage';
 
 import { loader as cryptoLoader } from './pages/Cryptocurrencies';
 import Signup from './ui/Signup';
+import AppLayout from './ui/AppLayout';
+import Login from './ui/Login';
 const router = createBrowserRouter([
   {
     path: '/',
@@ -45,9 +47,13 @@ const router = createBrowserRouter([
   },
 
   {
-    path: 'login',
+    path: '/',
     element: <LoginPage />,
     children: [
+      {
+        path: 'login',
+        element: <Login />,
+      },
       {
         path: 'signup',
         element: <Signup />,

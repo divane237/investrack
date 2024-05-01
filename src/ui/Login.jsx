@@ -3,7 +3,7 @@ import { useState } from 'react';
 function Login() {
   const [hidePassword, setHidePassword] = useState(true);
   return (
-    <form className="absolute left-1/2 top-1/2 flex w-2/3 -translate-x-1/2 -translate-y-1/2 flex-col items-stretch gap-y-10 rounded-3xl border-2 px-8 py-9 text-gray-100 backdrop-blur-md sm:w-[400px]">
+    <form className="absolute left-1/2 top-1/2 flex w-4/5 -translate-x-1/2 -translate-y-1/2 flex-col items-stretch gap-y-10 rounded-3xl border-2 px-8 py-9 text-gray-100 backdrop-blur-md sm:w-[400px]">
       {/* Login section will be added on the LoginPage and OUtlet would be enable to switch between them*/}
       {/* <section>
         <p className="text-xl font-medium">Login</p>
@@ -91,11 +91,11 @@ function Login() {
 
       {/* Forgot password section */}
 
-      <section className="flex gap-x-1 text-xs">
-        <input type="checkbox" className="m-0 w-7 p-0 hover:cursor-pointer" />
+      <section className="flex text-xs">
+        <input type="checkbox" className="w-6 hover:cursor-pointer" />
 
-        <p className="text-blue-600">Remember me</p>
-        <a href="/" className="ml-auto text-blue-600">
+        <p className="text-stone-400">Remember me</p>
+        <a href="/" className="ml-auto text-blue-400">
           Forgot Password?
         </a>
       </section>
