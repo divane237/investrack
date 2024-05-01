@@ -208,22 +208,66 @@ function NavBar() {
 
           <ul className={'flex w-full items-center'}>
             <li>
-              <NavLink to="Home" className={NAVLINK_STYLE}>
+              <NavLink
+                to="Home"
+                className={({ isActive, isPending, isTransitioning }) =>
+                  [
+                    isPending ? 'pending' : '',
+                    isActive
+                      ? `active ${NAVLINK_STYLE} bg-stone-300`
+                      : `${NAVLINK_STYLE}`,
+                    isTransitioning ? 'transitioning' : '',
+                  ].join(' ')
+                }
+              >
                 Home
               </NavLink>
             </li>
             <li>
-              <NavLink to="cryptocurrencies" className={NAVLINK_STYLE}>
+              <NavLink
+                to="cryptocurrencies"
+                className={({ isActive, isPending, isTransitioning }) =>
+                  [
+                    isPending ? 'pending' : '',
+                    isActive
+                      ? `active ${NAVLINK_STYLE} bg-stone-300`
+                      : `${NAVLINK_STYLE}`,
+                    isTransitioning ? 'transitioning' : '',
+                  ].join(' ')
+                }
+              >
                 Cryptocurrencies
               </NavLink>
             </li>
             <li>
-              <NavLink to="stocks" className={NAVLINK_STYLE}>
+              <NavLink
+                to="stocks"
+                className={({ isActive, isPending, isTransitioning }) =>
+                  [
+                    isPending ? 'pending' : '',
+                    isActive
+                      ? `active ${NAVLINK_STYLE} bg-stone-300`
+                      : `${NAVLINK_STYLE}`,
+                    isTransitioning ? 'transitioning' : '',
+                  ].join(' ')
+                }
+              >
                 Stocks
               </NavLink>
             </li>
             <li>
-              <NavLink to="portfolio" className={NAVLINK_STYLE}>
+              <NavLink
+                to="portfolio"
+                className={({ isActive, isPending, isTransitioning }) =>
+                  [
+                    isPending ? 'pending' : '',
+                    isActive
+                      ? `active ${NAVLINK_STYLE} bg-stone-300`
+                      : `${NAVLINK_STYLE}`,
+                    isTransitioning ? 'transitioning' : '',
+                  ].join(' ')
+                }
+              >
                 Portfolio
               </NavLink>
             </li>

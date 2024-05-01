@@ -121,12 +121,12 @@ function CryptoNotificationAnimation({ top_50_cryptos }) {
 
       <div
         className={
-          'absolute left-0 top-0 block w-[40px] border-none bg-gradient-to-r from-stone-50 to-stone-200 p-4'
+          'absolute left-0 top-0 block w-[60px] border-none bg-gradient-to-r from-stone-300 to-stone-200 p-4 md:w-[100px]'
         }
       ></div>
       <div
         className={
-          'absolute right-0 top-0 block w-[40px] border-none bg-gradient-to-l from-stone-50 to-stone-200 p-4'
+          'absolute right-0 top-0 block w-[60px] border-none bg-gradient-to-l from-stone-300 to-stone-200 p-4 md:w-[100px]'
         }
       ></div>
     </div>

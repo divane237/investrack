@@ -68,7 +68,7 @@ export default {
         },
       },
       animation: {
-        'crypto-loop': 'loop 15s linear infinite',
+        'crypto-loop': 'loop 60s linear infinite',
         'mobile-menu': 'menu 0.3s linear',
         'light-mode':
           'light-mode 0.3s cubic-bezier(0.1, -0.6, 0.2, 0) 0s forwards',
