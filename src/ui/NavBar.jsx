@@ -10,9 +10,10 @@ const NAVLINK_STYLE =
 function NavBar() {
   // Disble the background content once redux is installed
   // in Global state.
-  const [mobileMenu, setMobileMenu] = useState(false);
-  const [darkMode, setDarkMode] = useState(false);
+  const [mobileMenu, setMobileMenu] = useState(null);
+  const [darkMode, setDarkMode] = useState(null);
 
+  console.log(mobileMenu);
   function handleMobileMenuToggle() {
     setMobileMenu(!mobileMenu);
     console.log(mobileMenu);
@@ -20,6 +21,7 @@ function NavBar() {
 
   function removeMobileMenu() {
     setMobileMenu(false);
+    console.log(mobileMenu);
   }
 
   return (
@@ -86,9 +88,9 @@ function NavBar() {
           {/*  */}
 
           {/* Mobile Menu */}
-          {mobileMenu && (
+          {
             <div
-              className={`absolute left-0 top-0 z-10 min-h-[100vh] w-full animate-mobile-menu bg-stone-100 transition-all duration-1000 ease-in-out md:w-2/3`}
+              className={`absolute -left-full top-0 z-10 min-h-[100vh] w-full ${mobileMenu === false ? 'animate-exit-menu' : mobileMenu === true ? 'animate-mobile-menu' : ''} bg-stone-100 transition-all duration-1000 ease-in-out md:w-2/3`}
             >
               <div className="mb-1 flex border-b-2 py-2 shadow-md">
                 <Logo />
@@ -202,7 +204,7 @@ function NavBar() {
                 </div>
               </div>
             </div>
-          )}
+          }
 
           {/* DESKTOP display */}
 
