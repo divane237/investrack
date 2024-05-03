@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
 function Signup() {
-  const [hidePassword, setHidePassword] = useState();
+  const [hidePassword, setHidePassword] = useState(true);
   return (
     <div>
       <form

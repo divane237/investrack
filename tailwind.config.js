@@ -7,9 +7,9 @@ export default {
     extend: {
       keyframes: {
         loop: {
-          from: { transform: 'translate(0%, -50%)' },
+          from: { transform: 'translate(1%, -50%)' },
 
-          to: { transform: 'translate(-70%, -50%)' },
+          to: { transform: 'translate(-105%, -50%)' },
         },
         //
         menu: {
@@ -24,13 +24,15 @@ export default {
         'light-mode': {
           '0%': {
             transform: 'translate(100%, -50%)',
+            opacity: 0.3,
           },
           '50%': {
-            transform: 'translate(-5%, -50%)',
+            transform: 'translate(-8%, -50%)',
+            opacity: 0.5,
           },
 
           '100%': {
-            transform: 'translate(5%, -50%)',
+            transform: 'translate(4%, -50%)',
             backgroundColor: 'gold',
             opacity: 0.7,
           },
@@ -39,9 +41,12 @@ export default {
         'dark-mode': {
           '0%': {
             transform: 'translate(0%, -50%)',
+            opacity: 0.3,
           },
           '50%': {
-            transform: 'translate(110%, -50%)',
+            transform: 'translate(108%, -50%)',
+            opacity: 0.5,
+            animationTimingFunction: 'linear',
           },
 
           '100%': {
@@ -68,12 +73,10 @@ export default {
         },
       },
       animation: {
-        'crypto-loop': 'loop 60s linear infinite',
+        'crypto-loop': 'loop 120s linear infinite',
         'mobile-menu': 'menu 0.3s linear',
-        'light-mode':
-          'light-mode 0.3s cubic-bezier(0.1, -0.6, 0.2, 0) 0s forwards',
-        'dark-mode':
-          'dark-mode 0.2s cubic-bezier(0.1, -0.6, 0.2, 0) 0s forwards',
+        'light-mode': 'light-mode 1s ease 0s  forwards',
+        'dark-mode': 'dark-mode 1s ease 0s forwards',
         'show-password': 'show-password 0.3s ease-in-out forwards',
         'hide-password': 'hide-password 0.1s ease-in-out forwards',
       },
