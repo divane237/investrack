@@ -1,13 +1,12 @@
 import Dashboard from '../ui/Dashboard';
-import DeleteIconButton from '../ui/DeleteIconButton';
 import Footer from '../ui/Footer';
 
 function Portfolio() {
   return (
-    <div className="overflow-hidden">
+    <div className="h-[82dvh] overflow-x-hidden border-2 border-solid border-green-700">
       <Dashboard />
 
-      <div className="-tanslate-y-full fixed bottom-0 w-full">
+      <div className="fixed bottom-0 w-full ">
         <Footer></Footer>
       </div>
     </div>

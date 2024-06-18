@@ -1,8 +1,8 @@
 function DraggableIcon({ controls, style }) {
   return (
     <svg
-      width="25"
-      height="25"
+      width="40"
+      height="45"
       viewBox="0 0 15 15"
       fill="none"
       onPointerDown={(e) => controls.start(e)}

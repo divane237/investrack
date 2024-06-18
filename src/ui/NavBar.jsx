@@ -1,7 +1,7 @@
 import Logo from './Logo';
 
 import { NavLink } from 'react-router-dom';
-import Footer from './Footer';
+
 import { useState } from 'react';
 
 const NAVLINK_STYLE =
@@ -13,7 +13,6 @@ function NavBar() {
   const [mobileMenu, setMobileMenu] = useState(null);
   const [darkMode, setDarkMode] = useState(null);
 
-  console.log(mobileMenu);
   function handleMobileMenuToggle() {
     setMobileMenu(!mobileMenu);
     console.log(mobileMenu);
@@ -40,7 +39,7 @@ function NavBar() {
               <a
                 onClick={handleMobileMenuToggle}
                 className={
-                  'block px-2 py-3 transition-all duration-300 ease-in-out hover:cursor-pointer hover:bg-stone-300 hover:py-3'
+                  'block px-2 py-3 transition-all duration-300 ease-in-out hover:cursor-pointer hover:py-3'
                 }
               >
                 <span>

@@ -14,7 +14,7 @@ function Signup() {
             type="text"
             id="fullName"
             placeholder="Full Name"
-            className="w-full rounded-full border-[1px] bg-transparent py-3 pl-6 pr-10 transition-all duration-300 autofill:bg-transparent autofill:text-white valid:border-green-600 hover:bg-transparent focus:border-none focus:bg-transparent focus:outline-none focus:ring focus:ring-white"
+            className="w-full rounded-full border-[1px] bg-transparent py-3 pl-6 pr-10 transition-all duration-300 autofill:bg-transparent autofill:text-white hover:bg-transparent focus:border-none focus:bg-transparent focus:outline-none focus:ring focus:ring-white"
             required
           />
 
@@ -32,14 +32,21 @@ function Signup() {
 
         {/* Email sections */}
         <section className="relative flex">
-          <input
+          {/* <input
             type="email"
             id="email"
             placeholder="Email"
             className="w-full rounded-full border-[1px] bg-transparent py-3 pl-6 pr-10 transition-all duration-300 autofill:bg-transparent autofill:text-white valid:border-green-600 hover:bg-transparent focus:border-none focus:bg-transparent focus:outline-none focus:ring focus:ring-white"
             required
+          /> */}
+          <input
+            type="email"
+            id="email"
+            placeholder="Email"
+            className="w-full rounded-full border-[1px] bg-transparent py-3 pl-6 pr-10 transition duration-300 autofill:bg-transparent autofill:text-white hover:bg-transparent focus:border-none focus:bg-transparent focus:outline-none focus:ring focus:ring-white [&:not(:focus)]:invalid:border-2 [&:not(:focus)]:invalid:border-red-500"
+            // required
           />
-
+          {/*  */}
           <span className="absolute right-4 top-4">
             <svg width="15" height="15" viewBox="0 0 15 15" fill="none">
               <path

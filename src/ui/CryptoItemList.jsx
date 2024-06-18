@@ -5,6 +5,8 @@ import StarIcon from './StarIcon';
 
 function CryptoItemList() {
   const { top_50_cryptos } = useLoaderData();
+
+  // console.log('https://cryptologos.cc/logos/${crypto.name}-${crypto.symbol}-logo.svg?v=032')
   return (
     <>
       <div className={'mx-4 mt-10 flex items-center'}>
@@ -76,12 +78,24 @@ function CryptoItemList() {
                     <td className={'border-b-2 px-4 py-6'}>
                       <p>{i + 1}</p>
                     </td>
-                    <td className={'border-b-2 px-4 py-6'}>
-                      <span className={''}>ICON </span>
+                    <td
+                      className={
+                        'flex items-center justify-center gap-3 border-b-2 px-4 py-6'
+                      }
+                    >
+                      {/* <span className={''}>ICON </span> */}
+                      {console.log(
+                        `https://cryptologos.cc/logos/${crypto.name.toLowerCase()}-${crypto.symbol.toLowerCase()}-logo.svg?v=032`,
+                      )}
+                      <img
+                        src={`https://cryptologos.cc/logos/${crypto.name.toLowerCase()}-${crypto.symbol.toLowerCase()}-logo.svg?v=032`}
+                        alt={crypto.name}
+                        width={25}
+                        height={25}
+                        className="inline-block h-[15] w-[18px]"
+                      />
                       <span className={''}>{crypto.symbol}</span>
-                      <span className={'max-sm:hidden'}>
-                        {` ${crypto.name}`}
-                      </span>
+                      <span className={'max-sm:hidden'}>{crypto.name}</span>
                     </td>
                   </tr>
                 );

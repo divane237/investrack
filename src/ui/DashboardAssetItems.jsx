@@ -20,7 +20,7 @@ function DashboardAssetItems({ item }) {
         dragControls={controls}
         style={{ boxShadow, y }}
         drag="y"
-        className="flex"
+        className="flex h-[50px] border-2 border-dashed border-blue-600"
       >
         <DeleteIconButton
           onClick={(e) => {
@@ -37,7 +37,7 @@ function DashboardAssetItems({ item }) {
           <p className="flex basis-1/4 justify-center bg-blue-500 px-2 text-center max-sm:hidden">
             <span className="select-none">{item.name}</span>
           </p>
-          <p className="flex basis-1/4 justify-center px-2 sm:hidden">
+          <p className="flex basis-1/4 justify-center sm:hidden">
             <span className="select-none"> {item.symbol}</span>
           </p>
           <p className="flex basis-1/4 select-none justify-center bg-green-500 px-2 text-center">

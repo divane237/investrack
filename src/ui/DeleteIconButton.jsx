@@ -2,9 +2,9 @@ function DeleteIconButton({ fill = false, color = 'red', onClick, id }) {
   return (
     <span>
       <svg
-        width="28"
-        height="25"
-        viewBox="0 0 15 15"
+        width="30"
+        height="40"
+        viewBox="0 -2 15 15"
         className={`hover:cursor-pointer`}
         onClick={onClick}
         id={id}
