@@ -40,7 +40,7 @@ function CryptoNews({ news }) {
       {/* // Outer div */}
       <div className={'group relative mb-10 h-[125px] p-3 md:mb-[5vw]'}>
         {/* Inner div controlling the image */}
-        <a
+        <div
           className={'relative'}
           href={news[currentSlide].link}
           target="_blank"
@@ -66,7 +66,7 @@ function CryptoNews({ news }) {
               }
             />
           </a>
-        </a>
+        </div>
 
         {/* Chevron left and right */}
         <div

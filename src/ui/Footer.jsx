@@ -29,7 +29,7 @@ function Footer() {
 
         {/* GitHub link and icon */}
         <a
-          href="https://github.com/empire237"
+          href="https://github.com/divane237"
           className={
             'p-1 transition-all duration-300 ease-in-out hover:rounded-full hover:bg-stone-50'
           }

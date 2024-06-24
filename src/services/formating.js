@@ -11,5 +11,5 @@ export function currencyFormatter(amount) {
 }
 
 export function numberFormatter(number) {
-  return Number.parseFloat(number).toFixed(2);
+  return new Intl.NumberFormat('en-US').format(number);
 }

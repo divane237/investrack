@@ -52,11 +52,11 @@ function CryptoItemList() {
       <div className={'mt-2 flex text-base'}>
         <div>
           <table className={'w-full whitespace-nowrap text-center'}>
-            <thead className={'border-b-2 bg-stone-100 text-sm'}>
+            <thead className={'border-b-2 bg-stone-100 text-sm font-semibold'}>
               <tr>
                 <th className={'px-2.5 py-2.5'}></th>
-                <th className={'px-2.5 py-2.5 font-semibold'}>#</th>
-                <th className={'px-2.5 py-2.5 font-semibold'}>Name</th>
+                <th className={'px-2.5 py-2.5'}>#</th>
+                <th className={'px-2.5 py-2.5'}>Name</th>
               </tr>
             </thead>
 
@@ -65,8 +65,10 @@ function CryptoItemList() {
             <tbody>
               {top_50_cryptos.map((crypto, i) => {
                 return (
-                  <tr key={crypto.id}>
+                  <tr key={crypto.id} className="border-gra-500 border-b-2 ">
                     <td className={'px-4 py-6'}>
+                      {/* StarIcon */}
+
                       <div>
                         <StarIcon
                           hoverMsg="Add to portfolio"
@@ -75,26 +77,29 @@ function CryptoItemList() {
                         />
                       </div>
                     </td>
-                    <td className={'border-b-2 px-4 py-6'}>
+
+                    {/* Number of coins */}
+
+                    <td className={'px-4'}>
                       <p>{i + 1}</p>
                     </td>
+
+                    {/* Name, Symbol and Icon */}
+
                     <td
                       className={
-                        'flex items-center justify-center gap-3 border-b-2 px-4 py-6'
+                        'flex items-center justify-center gap-3 px-4 py-5'
                       }
                     >
-                      {/* <span className={''}>ICON </span> */}
-                      {console.log(
-                        `https://cryptologos.cc/logos/${crypto.name.toLowerCase()}-${crypto.symbol.toLowerCase()}-logo.svg?v=032`,
-                      )}
-                      <img
-                        src={`https://cryptologos.cc/logos/${crypto.name.toLowerCase()}-${crypto.symbol.toLowerCase()}-logo.svg?v=032`}
-                        alt={crypto.name}
-                        width={25}
-                        height={25}
-                        className="inline-block h-[15] w-[18px]"
-                      />
-                      <span className={''}>{crypto.symbol}</span>
+                      <div className="max-h-[50px]">
+                        <img
+                          src={`https://cryptologos.cc/logos/${crypto.name.split(' ').join('-').toLowerCase()}-${crypto.symbol.toLowerCase()}-logo.svg?v=032`}
+                          alt={crypto.name}
+                          className="h-[30px] w-[30px]"
+                        />
+                      </div>
+
+                      <span className={'sm:hidden'}>{crypto.symbol}</span>
                       <span className={'max-sm:hidden'}>{crypto.name}</span>
                     </td>
                   </tr>
@@ -108,14 +113,13 @@ function CryptoItemList() {
 
         <div className="grow basis-[80%] overflow-hidden hover:overflow-x-scroll">
           <table className={'w-full table-auto whitespace-nowrap text-center'}>
-            <thead className={'border-b-2 bg-stone-100 text-sm '}>
+            <thead className={'border-b-2 bg-stone-100 text-sm font-semibold'}>
               <tr>
-                <th className={'px-4 py-2.5 font-semibold'}>Price</th>
+                <th className={'px-4 py-2.5'}>Price</th>
                 <th className={'px-4 py-2.5'}>24h △</th>
                 <th className={'px-4 py-2.5'}>7d △</th>
                 <th className={'px-4 py-2.5'}>Market Cap</th>
-                <th className={'px-4 py-2.5'}>Circulating Supply</th>
-                <th className={'px-4 py-2.5'}>Max Supply</th>
+                <th className={'px-4 py-2.5'}>Supply</th>
               </tr>
             </thead>
 
@@ -126,51 +130,53 @@ function CryptoItemList() {
                 const dailyChange = crypto.quote.USD.percent_change_24h;
                 const weeklyChange = crypto.quote.USD.percent_change_7d;
                 return (
-                  <tr key={crypto.id}>
-                    <td className={'border-b-2 px-4 py-6 '}>
+                  <tr key={crypto.id} className="border-2 ">
+                    <td className={'px-6 py-6'}>
                       <p>{currencyFormatter(crypto.quote.USD.price)}</p>
                     </td>
                     <td
-                      className={
+                      className={`px-3 text-sm ${
                         dailyChange > 0
-                          ? 'text-gr border-b-2 px-4 py-6 text-sm text-green-500'
+                          ? 'text-green-500'
                           : dailyChange < 0
-                            ? 'text- border-b-2 px-4 py-6 text-sm text-red-500'
-                            : 'text-st border-b-2 px-4 py-6 text-sm'
-                      }
+                            ? 'text-red-500'
+                            : ''
+                      }`}
                     >
-                      <p>
-                        {' '}
-                        {Math.abs(
-                          numberFormatter(crypto.quote.USD.percent_change_24h),
-                        )}
-                        %
-                      </p>
+                      {' '}
+                      {Math.abs(
+                        numberFormatter(crypto.quote.USD.percent_change_24h),
+                      )}
+                      %
                     </td>
                     <td
-                      className={
-                        weeklyChange > 0
-                          ? 'text-gr border-b-2 px-4 py-6 text-sm text-green-500'
-                          : weeklyChange < 0
-                            ? 'text- border-b-2 px-4 py-6 text-sm text-red-500'
-                            : 'text-st border-b-2 px-4 py-6 text-sm'
-                      }
+                      className={`px-3 text-sm
+                        ${
+                          weeklyChange > 0
+                            ? 'text-green-500'
+                            : weeklyChange < 0
+                              ? 'text-red-500'
+                              : ''
+                        }
+                      `}
                     >
                       {Math.abs(
                         numberFormatter(crypto.quote.USD.percent_change_7d),
                       )}
                       %
                     </td>
-                    <td className={'border-b-2 px-4 py-6'}>
+                    <td className={'px-4'}>
                       {currencyFormatter(crypto.quote.USD.market_cap)}
                     </td>
-                    <td className={'border-b-2 px-4 py-6'}>
-                      {currencyFormatter(crypto.circulating_supply)}
-                    </td>
-                    <td className={'border-b-2 px-4 py-6 '}>
-                      {crypto.max_supply === null
-                        ? 'Unlimited'
-                        : currencyFormatter(crypto.max_supply)}
+                    <td className="flex h-[72px] flex-col items-center justify-center gap-2 px-4">
+                      <span>{numberFormatter(crypto.circulating_supply)}</span>
+                      {typeof crypto.max_supply === 'number' && (
+                        <meter
+                          value={crypto.circulating_supply / crypto.max_supply}
+                          min={0}
+                          max={1}
+                        ></meter>
+                      )}
                     </td>
                   </tr>
                 );

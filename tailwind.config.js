@@ -86,8 +86,8 @@ export default {
       },
       animation: {
         'crypto-loop': 'loop 120s linear infinite',
-        'mobile-menu': 'menu 1s ease 0s forwards',
-        'exit-menu': 'exit-menu 1s ease forwards',
+        'mobile-menu': 'menu 0.5s ease-in-out forwards',
+        'exit-menu': 'exit-menu 0.3s  ease-out  forwards',
         'light-mode': 'light-mode 0.5s ease-out 0s  forwards',
         'dark-mode': 'dark-mode 0.5s ease-out 0s forwards',
         'show-password': 'show-password 0.3s ease-in-out forwards',
